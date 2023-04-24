@@ -3,10 +3,10 @@ if (!function_exists('visitor')) {
     /**
      * Access visitor through helper.
      *
-     * @return \Shetabit\Visitor\Visitor
+     * @return \torgodly\Visitor\Visitor
      */
     function visitor()
     {
-        return app('shetabit-visitor');
+        return app('torgodly-visitor');
     }
 }

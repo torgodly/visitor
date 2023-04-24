@@ -1,10 +1,10 @@
 <?php
 
-namespace Shetabit\Visitor\Drivers;
+namespace torgodly\Visitor\Drivers;
 
 use Illuminate\Http\Request;
 use Jenssegers\Agent\Agent;
-use Shetabit\Visitor\Contracts\UserAgentParser;
+use torgodly\Visitor\Contracts\UserAgentParser;
 
 class JenssegersAgent implements UserAgentParser
 {

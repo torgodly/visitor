@@ -1,12 +1,12 @@
 <?php
 
-namespace Shetabit\Visitor;
+namespace torgodly\Visitor;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Shetabit\Visitor\Contracts\UserAgentParser;
-use Shetabit\Visitor\Exceptions\DriverNotFoundException;
-use Shetabit\Visitor\Models\Visit;
+use torgodly\Visitor\Contracts\UserAgentParser;
+use torgodly\Visitor\Exceptions\DriverNotFoundException;
+use torgodly\Visitor\Models\Visit;
 
 class Visitor implements UserAgentParser
 {

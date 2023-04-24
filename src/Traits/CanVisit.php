@@ -1,9 +1,9 @@
 <?php
 
-namespace Shetabit\Visitor\Traits;
+namespace torgodly\Visitor\Traits;
 
 use Illuminate\Support\Facades\Auth;
-use Shetabit\Visitor\Models\Visit;
+use torgodly\Visitor\Models\Visit;
 use Illuminate\Database\Eloquent\Builder;
 
 trait CanVisit

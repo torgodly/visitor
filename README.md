@@ -11,7 +11,7 @@ This is a laravel package to extract and access visitors' information such as `b
 Via composer
 
 ```bash
-composer require shetabit/visitor
+composer require torgodly/visitor
 ```
 
 ### Configure
@@ -22,13 +22,13 @@ If you are using Laravel 5.5 or higher then you don't need to add the provider a
 # In your providers array.
 'providers' => [
     ...
-    Shetabit\Visitor\Provider\VisitorServiceProvider::class,
+    torgodly\Visitor\Provider\VisitorServiceProvider::class,
 ],
 
 # In your aliases array.
 'aliases' => [
     ...
-    'Visitor' => Shetabit\Visitor\Facade\Visitor::class,
+    'Visitor' => torgodly\Visitor\Facade\Visitor::class,
 ],
 ```
 
@@ -69,7 +69,7 @@ You can create logs using the `visit` method like the below
 visitor()->visit(); // create a visit log
 ```
 
-use `Shetabit\Visitor\Traits\Visitable` trait in your models, then you can save visit's log for your models like the below
+use `torgodly\Visitor\Traits\Visitable` trait in your models, then you can save visit's log for your models like the below
 
 ```php
 // or you can save log like the below
@@ -101,7 +101,7 @@ $model->visitLogs()->distinct('ip')->count('ip');
 $model->visitLogs()->visitor()->count();
 ```
 
-use `Shetabit\Visitor\Traits\Visitor` in your `User` class, then you can run below codes
+use `torgodly\Visitor\Traits\Visitor` in your `User` class, then you can run below codes
 
  ```php
 $user->visit(); // create a visit log
@@ -110,7 +110,7 @@ $user->visit($model); // create a log which says, $user has visited $model
 
 #### Retrieve and Determine Online users
 
-use `Shetabit\Visitor\Traits\Visitor` in your `User` class at first.
+use `torgodly\Visitor\Traits\Visitor` in your `User` class at first.
 
 Then you can retrieve online users which are instance of `User` class and determine if a user is online.
 
@@ -126,6 +126,6 @@ $user->isOnline(); // another way
 
 Your application can store visitor's log automatically using `LogVisits` middleware.
 
-Add the `Shetabit\Visitor\Middlewares\LogVisits` middleware if you want to save logs automatically.
+Add the `torgodly\Visitor\Middlewares\LogVisits` middleware if you want to save logs automatically.
 
-The middleware will store logs for models which has binded in router (router model binding) and has used `Shetabit\Visitor\Traits\Visitable` trait.
+The middleware will store logs for models which has binded in router (router model binding) and has used `torgodly\Visitor\Traits\Visitable` trait.

@@ -1,13 +1,13 @@
 <?php
 
-namespace Shetabit\Visitor\Facade;
+namespace torgodly\Visitor\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class viewer
  *
- * @package Shetabit\Visitor\Facade
+ * @package torgodly\Visitor\Facade
  */
 class Visitor extends Facade
 {
@@ -18,6 +18,6 @@ class Visitor extends Facade
      */
     public static function getFacadeAccessor()
     {
-        return 'shetabit-visitor';
+        return 'torgodly-visitor';
     }
 }

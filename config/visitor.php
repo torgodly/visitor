@@ -27,11 +27,11 @@ return [
     | You can create your own driver if you like and add the
     | config in the drivers array and the class to use for
     | here with the same name. You will have to implement
-    | Shetabit\Visitor\Contracts\UserAgentParser in your driver.
+    | torgodly\Visitor\Contracts\UserAgentParser in your driver.
     |
     */
     'drivers' => [
-        'jenssegers' => \Shetabit\Visitor\Drivers\JenssegersAgent::class,
-        'UAParser' => \Shetabit\Visitor\Drivers\UAParser::class,
+        'jenssegers' => \torgodly\Visitor\Drivers\JenssegersAgent::class,
+        'UAParser' => \torgodly\Visitor\Drivers\UAParser::class,
     ]
 ];

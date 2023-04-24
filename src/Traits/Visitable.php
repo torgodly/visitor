@@ -1,9 +1,9 @@
 <?php
 
-namespace Shetabit\Visitor\Traits;
+namespace torgodly\Visitor\Traits;
 
 use Illuminate\Support\Facades\Auth;
-use Shetabit\Visitor\Models\Visit;
+use torgodly\Visitor\Models\Visit;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -28,6 +28,6 @@ trait Visitable
      */
     public function createVisitLog(?Model $visitor)
     {
-        return app('shetabit-visitor')->setVisitor($visitor)->visit($this);
+        return app('torgodly-visitor')->setVisitor($visitor)->visit($this);
     }
 }

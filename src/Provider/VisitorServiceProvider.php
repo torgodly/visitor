@@ -1,10 +1,10 @@
 <?php
 
-namespace Shetabit\Visitor\Provider;
+namespace torgodly\Visitor\Provider;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
-use Shetabit\Visitor\Visitor;
+use torgodly\Visitor\Visitor;
 
 class VisitorServiceProvider extends ServiceProvider
 {
@@ -54,7 +54,7 @@ class VisitorServiceProvider extends ServiceProvider
         /**
          * Bind to service container.
          */
-        $this->app->singleton('shetabit-visitor', function () {
+        $this->app->singleton('torgodly-visitor', function () {
             $request = app(Request::class);
 
             return new Visitor($request, config('visitor'));
@@ -67,7 +67,7 @@ class VisitorServiceProvider extends ServiceProvider
     protected function registerMacroHelpers()
     {
         Request::macro('visitor', function () {
-            return app('shetabit-visitor');
+            return app('torgodly-visitor');
         });
     }
 }

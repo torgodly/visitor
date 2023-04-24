@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Visitor\Middlewares;
+namespace torgodly\Visitor\Middlewares;
 
 use Closure;
 use Illuminate\Database\Eloquent\Model;

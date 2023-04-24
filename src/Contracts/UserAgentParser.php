@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Visitor\Contracts;
+namespace torgodly\Visitor\Contracts;
 
 interface UserAgentParser
 {

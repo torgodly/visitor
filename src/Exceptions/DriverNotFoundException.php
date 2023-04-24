@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Visitor\Exceptions;
+namespace torgodly\Visitor\Exceptions;
 
 class DriverNotFoundException extends \Exception
 {

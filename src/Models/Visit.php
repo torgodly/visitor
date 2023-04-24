@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Visitor\Models;
+namespace torgodly\Visitor\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

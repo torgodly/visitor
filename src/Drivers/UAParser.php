@@ -1,10 +1,10 @@
 <?php
 
-namespace Shetabit\Visitor\Drivers;
+namespace torgodly\Visitor\Drivers;
 
 use UAParser\Parser;
 use Illuminate\Http\Request;
-use Shetabit\Visitor\Contracts\UserAgentParser;
+use torgodly\Visitor\Contracts\UserAgentParser;
 
 class UAParser implements UserAgentParser
 {

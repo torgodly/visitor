@@ -1,15 +1,15 @@
 {
-    "name": "shetabit/visitor",
+    "name": "torgodly/visitor",
     "type": "library",
     "description": "Laravel visitor",
     "keywords": [
-        "shetabit",
+        "torgodly",
         "visitor",
         "track laravel visitors",
         "trace laravel visitors",
         "parse laravel user agents"
     ],
-    "homepage": "https://github.com/shetabit/visitor",
+    "homepage": "https://github.com/torgodly/visitor",
     "license": "MIT",
     "authors": [
         {
@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Shetabit\\Visitor\\": "src"
+            "torgodly\\Visitor\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -40,7 +40,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Shetabit\\Visitor\\Tests\\": "tests"
+            "torgodly\\Visitor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,10 +51,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Shetabit\\Visitor\\Provider\\VisitorServiceProvider"
+                "torgodly\\Visitor\\Provider\\VisitorServiceProvider"
             ],
             "aliases": {
-                "Visitor": "Shetabit\\Visitor\\Facade\\Visitor"
+                "Visitor": "torgodly\\Visitor\\Facade\\Visitor"
             }
         }
     },
