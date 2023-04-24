@@ -231,18 +231,27 @@ class Visitor implements UserAgentParser
      *
      * @param Model $model
      */
-    public function visit(Model $model = null)
+    public function visit(Model $model = null, $remember_ip = 0)
     {
         if(in_array($this->request->path(), $this->except)){
             return;
-        }  
+        }
 
         $data = $this->prepareLog();
+        $old_ip = Visit::where('ip', $data['ip'])->get()->last();
 
-        if (null !== $model && method_exists($model, 'visitLogs')) {
-            $visit = $model->visitLogs()->create($data);
+        if (null !== $model && method_exists($model, 'visitLogs') && null !== $old_ip ) {
+            if ($old_ip?->created_at->diffInSeconds() > $remember_ip){
+
+                $visit = $model->visitLogs()->create($data);
+
+            }else{
+                $visit = Visit::where('ip', $old_ip?->ip)?->get()->last()->increment('hits');
+            }
+
+
         } else {
-            $visit = Visit::create($data);
+            $visit = $model->visitLogs()->create($data);
         }
 
         return $visit;
